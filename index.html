@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Hyundai Seoul</title>
     <link href="css/index.css" rel="stylesheet">
+    
     <script defer src="./js/index.js"></script>
     <script defer src="./js/common.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
 </head>
 <body>
     <header>
@@ -180,27 +187,29 @@
                     <a href="#">MORE</a>
                 </div>
             </article>
-            <div class="main4_flex">
-                <div class="flex_img1">
-                    <figure>
+            <div class="main4_flex swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="flex_img1 swiper-slide">
                         <img src="./image/main4/img_main_art_01.jpg" alt="img1">
                         <span>BAHK SEON GHI</span>
-                    </figure>
-                </div>
-                <div class="flex_img2">
-                    <figure>
+                    </div>
+                    <div class="flex_img2 swiper-slide">
                         <img src="./image/main4/img_main_art_02.jpg" alt="img2">
                         <span>Beyond the road</span>
-                    </figure>
-                </div>
-                <div class="flex_img3">
-                    <figure>
+                    </div>
+                    <div class="flex_img3 swiper-slide">
                         <img src="./image/main4/img_main_art_03.jpg" alt="img3">
                         <span>CH 1985</span>
-                    </figure>
+                    </div>
                 </div>
+                <!-- <div class="swiper-pagination swiper-pagination-fraction">
+                    <span class="swiper-pagination-current">1</span>
+                     / 
+                    <span class="swiper-pagination-total">3</span>
+                </div> -->
             </div>
         </div>
+        
 
         <div class="main5">
             <article class="main5_textAll">

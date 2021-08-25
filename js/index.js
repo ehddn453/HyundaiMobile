@@ -1,3 +1,15 @@
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  console.log(swiper)
+
 const elStart = document.querySelector('.main1_start_bg'),
       elMain1 = document.querySelector('.main1'),
       elMain1Back = document.querySelector('.main1_back'),
@@ -169,12 +181,59 @@ window.addEventListener('scroll',function(){
     }
 });
 
-const elMain4 = document.querySelector('.main4');
+const elMain4 = document.querySelector('.main4'),
+      elMain4Txt = document.querySelector('.main4_text');
 
 window.addEventListener('scroll',function(){
     //main4 들어오면 헤더 색 변경
     let elMain4Top = elMain4.offsetTop - window.innerHeight <= window.scrollY - 500;
     if(elMain4Top == true){
         elHeader.classList.remove('white');
+    };
+    let elMain4Top2 = elMain4.offsetTop - window.innerHeight <= window.scrollY - 200;
+    if(elMain4Top2 == true){
+        elMain4Txt.classList.add('active');
+    }else{
+        elMain4Txt.classList.remove('active');
+    };
+
+});
+
+const elMain5Fig = document.querySelector('.main5 figure'),
+      elMain5Txt = document.querySelector('.main5_text')
+
+window.addEventListener('scroll',function(){
+    let elMain5Top = elMain5Fig.offsetTop - window.innerHeight <= window.scrollY;
+    //main5 이미지 위에 배경색 제거
+    if(elMain5Top == true){
+        elMain5Fig.classList.add('active');
+    }else{
+        elMain5Fig.classList.remove('active');
+    };
+    if(elMain5Top == true){
+        elMain5Txt.classList.add('active');
+    }else{
+        elMain5Txt.classList.remove('active');
+    };
+
+});
+
+const elMain6Fig = document.querySelector('.main6_con figure'),
+      elMain6P = document.querySelector('.main6_con p'),
+      elMain6 = document.querySelector('.main6');
+
+window.addEventListener('scroll',function(){
+    //main6 이미지 위에 배경색 제거
+    let elMain6Top = elMain6.offsetTop - window.innerHeight <= window.scrollY;
+    if(elMain6Top == true){
+        elMain6Fig.classList.add('active');
+    }else{
+        elMain6Fig.classList.remove('active');
+    };
+    //글씨 떠오르기
+    if(elMain6Top == true){
+        elMain6P.classList.add('active');
+    }else{
+        elMain6P.classList.remove('active');
     };
 });

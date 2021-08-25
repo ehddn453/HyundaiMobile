@@ -1079,6 +1079,74 @@ img {
     font-weight: normal;
     padding-bottom: 5%;
   }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .swiper-slide {
+    width: 100%;
+    margin: 5%;
+  }
+  .swiper-slide img {
+    width: 100%;
+  }
+  .swiper-slide:nth-child(1) {
+    width: 60%;
+    position: relative;
+  }
+  .swiper-slide:nth-child(1) span {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -12%;
+    font-size: 0.8rem;
+  }
+  .swiper-slide:nth-child(2) {
+    width: 60%;
+    position: relative;
+    margin-top: 40%;
+  }
+  .swiper-slide:nth-child(2) span {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -15%;
+    font-size: 0.8rem;
+  }
+  .swiper-slide:nth-child(3) {
+    width: 60%;
+    position: relative;
+    margin-top: 10%;
+  }
+  .swiper-slide:nth-child(3) span {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -7%;
+    font-size: 0.8rem;
+  }
   .main4 .main4_textAll {
     margin-top: 40%;
   }
@@ -1093,12 +1161,22 @@ img {
     width: 90%;
     margin: 7% auto 3%;
   }
+  .main4 .main4_textAll .main4_text.active p span {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
   .main4 .main4_textAll .main4_text p {
     margin: 2% 0;
+    overflow: hidden;
   }
   .main4 .main4_textAll .main4_text p span {
     font-weight: bold;
     font-size: 1.2rem;
+    display: block;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition: 1s;
+    transition: 1s;
   }
   .main4 .main4_textAll .main4_more {
     width: 90%;
@@ -1116,26 +1194,6 @@ img {
     border: 2px solid #000;
     border-radius: 20px;
   }
-  .main4 .main4_flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .main4 .main4_flex .flex_img1 figure img {
-    width: 100%;
-  }
-  .main4 .main4_flex .flex_img2 figure img {
-    width: 100%;
-  }
-  .main4 .main4_flex .flex_img3 figure img {
-    width: 100%;
-  }
   .main5 .main5_textAll {
     margin-top: 40%;
   }
@@ -1150,12 +1208,22 @@ img {
     width: 90%;
     margin: 7% auto 3%;
   }
+  .main5 .main5_textAll .main5_text.active p span {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
   .main5 .main5_textAll .main5_text p {
     margin: 2% 0;
+    overflow: hidden;
   }
   .main5 .main5_textAll .main5_text p span {
     font-weight: bold;
     font-size: 1.2rem;
+    display: inline-block;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition: 1s;
+    transition: 1s;
   }
   .main5 .main5_textAll .main5_more {
     width: 90%;
@@ -1175,9 +1243,14 @@ img {
   }
   .main5 figure {
     position: relative;
+    overflow: hidden;
   }
   .main5 figure img {
     width: 100%;
+  }
+  .main5 figure.active::before {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   .main5 figure::before {
     width: 100%;
@@ -1218,14 +1291,44 @@ img {
     padding: 35% 0;
     width: 60%;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
   }
   .main6 .main6_con figure img {
     width: 100%;
+  }
+  .main6 .main6_con figure.active::before {
+    -webkit-transform: translateY(-105%);
+            transform: translateY(-105%);
+  }
+  .main6 .main6_con figure::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #f0e4ed;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
   }
   .main6 .main6_con p {
     position: absolute;
     left: calc(50% - 40%);
     top: 40%;
+    overflow: hidden;
+  }
+  .main6 .main6_con p.active span {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .main6 .main6_con p span {
+    display: inline-block;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition: 1s;
+    transition: 1s;
   }
   .main6 .main6_con p span:nth-of-type(1) {
     font-size: 3rem;
