@@ -8,12 +8,13 @@
 
     //main1 start-----------------------------------------------------
     .main1_start_bg{
-        background: url('../image/img_main_kv.jpg') no-repeat fixed center center;
+        background: url('../image/img_main_kv.jpg') no-repeat center center;
+        background-attachment: fixed !important;
         background-size: cover;
         transform: scale(0.6);
         transition: 1s;
         width: 100%;
-        min-width: 100%;
+
         .main1_start{
             width: 100%; height: 90vh;
             padding-top: 20%;
@@ -141,8 +142,8 @@
         display: block;
         .main1_back{
             width: 100%; height: 100%;
-            min-width: 100%;
-            background: url('../image/img_main_kv.jpg') fixed center center no-repeat;
+            background: url('../image/img_main_kv.jpg') center center no-repeat;
+            background-attachment: fixed !important;
             background-size: cover;
             .main1_text1{
                 width: 100%; height: 90vh;
@@ -225,7 +226,6 @@
                     font-weight: bold;
                     line-height: 2.5rem;
                     padding: 0 5%;
-                    
                 }
             }
             &.active{
