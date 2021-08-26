@@ -464,7 +464,7 @@ img {
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 360px) and (max-width: 767px) {
   .main1_start_bg {
     background: url("../image/img_main_kv.jpg") no-repeat fixed center center;
     background-size: cover;
